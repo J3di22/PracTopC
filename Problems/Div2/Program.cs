@@ -80,6 +80,12 @@ namespace Div1
             Console.WriteLine(userName.newMember(new string[] { "kick", "kick", "kick" }, "kick") == "kick1");
             Console.WriteLine(userName.newMember(new string[] { "A", "AB" }, "A") == "A1");
             Console.WriteLine(userName.newMember(new string[] { "a", "a1", "a2", "a7" }, "a") == "a3");
+
+
+            BettingMoney bm = new BettingMoney();
+            Console.WriteLine(bm.moneyMade(new int[] { 10, 20, 30 }, new int[] { 20, 30, 40 }, 1));
+
+            Console.WriteLine(bm.moneyMade(new int[] { 100 }, new int[] { 10 }, 0));
         }
     }
 }
