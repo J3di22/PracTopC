@@ -10,18 +10,18 @@ namespace CCI
     {
         internal bool Test(string str)
         {
-            bool hasDuplicate = false;
+            if (str == null)
+            {
+                return false;
+            }
 
             Dictionary<char, int> map = new Dictionary<char, int>();
 
             foreach (char c in str)
             {
-                Console.WriteLine(c);
                 if (map.ContainsKey(c))
                 {
-                    hasDuplicate = true;
-
-                    map[c]++;
+                    return false;
                 }
                 else
                 {
@@ -29,12 +29,7 @@ namespace CCI
                 }
             }
 
-            foreach (char c in map.Keys)
-            {
-                Console.WriteLine(c + "\t" + map[c]);
-            }
-
-            return hasDuplicate;
+            return true;
         }
     }
 }

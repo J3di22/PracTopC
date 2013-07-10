@@ -13,10 +13,10 @@ namespace CCI
             try
             {
                 UniqueCharacter u = new UniqueCharacter();
-                Console.WriteLine(u.Test("arsdd"));
-                Console.WriteLine(u.Test("ars"));
-                Console.WriteLine(u.Test(null));
-                Console.WriteLine(u.Test(String.Empty));
+                Console.WriteLine("arsdd " + u.Test("arsdd"));
+                Console.WriteLine("ars " + u.Test("ars"));
+                Console.WriteLine("null " + u.Test(null));
+                Console.WriteLine("Empty" + u.Test(String.Empty));
             }
             catch (Exception e)
             {
